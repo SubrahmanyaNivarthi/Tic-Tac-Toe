@@ -1,0 +1,85 @@
+/* Reset and layout */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f1115;
+  color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Title and UI elements */
+h1 {
+  margin-top: 30px;
+  font-size: 2rem;
+  color: #00ffc8;
+  letter-spacing: 1px;
+}
+
+label, select, button, #status {
+  margin: 10px;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+select, button {
+  padding: 6px 14px;
+  background: #1c1e24;
+  border: 1px solid #333;
+  color: #00ffc8;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+select:hover, button:hover {
+  background: #2a2d36;
+  border-color: #00ffc8;
+}
+
+/* Game board */
+#board {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  grid-gap: 6px;
+  margin: 20px auto;
+}
+
+.cell {
+  width: 80px;
+  height: 80px;
+  background: #1c1e24;
+  color: #00ffc8;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 12px;
+  box-shadow: inset 0 0 10px #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease, transform 0.1s;
+  user-select: none;
+}
+
+.cell:hover {
+  background: #282c34;
+  transform: scale(1.05);
+}
+
+/* Game status */
+#status {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #fffc80;
+}
+
+/* Restart button */
+button {
+  margin-top: 20px;
+  background: #111;
+  font-weight: bold;
+}
